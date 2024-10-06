@@ -11,6 +11,9 @@
         "src": "/(.*)",
         "dest": "stk.py"
       }
-    ]
+    ],
+      "env": {
+        "PYTHON_VERSION": "3.8.10"
+      }
   }
   
