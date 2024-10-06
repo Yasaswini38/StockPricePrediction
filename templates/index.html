@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Price Prediction</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            background-image: url('static/Stkmrkt.jpg');
+            background-size: cover;
+            filter: blur(5px);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center; /* Center the text within the form */
+        }
+
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input[type="submit"] {
+            margin: 0 auto; /* Center the "Predict" button within the form */
+            display: block; /* Make it a block element to center the button */
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Price Prediction</h1>
+    <form method="post" action="/predict">
+        <label for="stock_name">Enter Stock Name: </label>
+        <input type="text" id="stock_name" name="stock_name">
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Price Prediction Result</title>
+    <style>
+        body {
+            background: none;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            background-image: url('static/Stkmrkt.jpg'); /* Replace 'static/Stkmrkt.jpg' with your image file path */
+            background-size: cover;
+            filter: blur(5px); /* Adjust the blur intensity as needed */
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+
+        h1, p, ul, li {
+            color: white; 
+            text-align: center; 
+            padding: 10px; 
+            border: 2px solid white; 
+            border-radius: 10px;
+            background: rgba(53, 51, 51, 0.897); 
+        }
+    </style>
+</head>
+<body>
+    <h1>Stock Price Prediction Result</h1>
+    <p>Stock Name: {{ stock_name }}</p>
+    <p>Predicted Stock Prices for Next 1 Week:</p>
+    <ul>
+        {% for price in predicted_prices %}
+            <li>{{ price }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
